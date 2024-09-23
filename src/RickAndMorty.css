@@ -1,0 +1,110 @@
+.rick-morty-app {
+  text-align: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-family: "Arial", sans-serif;
+}
+
+.character-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #34495e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.character-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.character-info {
+  text-align: left;
+}
+
+.loading-text {
+  font-size: 1.5em;
+  animation: blink 1s step-start 0s infinite;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  color: #f39c12;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.favorited .star-icon {
+  fill: #f1c40f;
+}
+
+.randomize-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #27ae60;
+  color: #ecf0f1;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s;
+}
+
+.randomize-btn:hover {
+  background: #2ecc71;
+}
+
+.favorites-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
